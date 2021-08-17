@@ -5,125 +5,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/cards/style.css">
     <title>Advanced looking cards</title>
-    <style>
-        html {
-            background-color: #04001a;
-        }
-
-
-
-        .cards {
-            display: flex;
-        }
-        
-
-        img {
-            border-radius: 5px;
-            width: 70%;
-            margin: 60px;
-            flex-direction: row;
-            justify-content: center;
-            align-content: center;
-
-
-        }
-
-        .image1 {
-            transform: skew(0deg, 4deg);
-            box-shadow: -15px 10px 18px 8px #000000;
-            transition: 0.5s ease-in;
-
-        }
-
-        .image1:hover {
-
-            transform: scale(1.3);
-            box-shadow: none;
-            
-        }
-
-        .image2 {
-            transition: 0.5s ease-in;
-            box-shadow: 0px 10px 18px 8px #000000;
-        }
-
-        .image2:hover {
-            transform: scale(1.3);
-            box-shadow: none;
-        }
-
-        .image3 {
-            transform: skew(0deg, -4deg);
-            box-shadow: 15px 10px 18px 8px #000000;
-            transition: 0.5s ease-in;
-        }
-
-        .image3:hover {
-            transform: scale(1.3);
-            box-shadow: none;
-        }
-        @media only screen and (max-width: 600px) {
-            .cards{
-              display: block;
-            }
-            .image3 {
-                transform: none;
-                box-shadow: 15px 10px 18px 8px #000000;
-                transition: 0.5s ease-in;
-            }
-            .image1 {
-                transform: none;
-                box-shadow: -15px 10px 18px 8px #000000;
-                transition: 0.5s ease-in;
     
-            }
-            html{
-                background-color:white;
-            }
-          }
-          @media only screen and (max-width: 800px) {
-            .cards{
-              display: block;
-            }
-            .image3 {
-                transform: none;
-                box-shadow: 15px 10px 18px 8px #000000;
-                transition: 0.5s ease-in;
-            }
-            .image1 {
-                transform: none;
-                box-shadow: -15px 10px 18px 8px #000000;
-                transition: 0.5s ease-in;
-    
-            }
-            html{
-                background-color:white;
-            }
-          }
-          
-    </style>
 </head>
 
 <body>
 
-    <div class="container">
-        <div class="cards">
-            <div class="img1">
-                <img src="https://images.unsplash.com/photo-1534190057688-16615ba750d4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=375&q=80"
-                    alt="img" class="image1">
-
-                
-
-            </div>
-            <div class="img2">
-                <img src="https://images.unsplash.com/photo-1536667839216-c4ce20e9772e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=358&q=80"
-                    alt="img" class="image2">
-            </div>
-            <div class="img3">
-                <img src="https://images.unsplash.com/photo-1614005827577-8b49aad7f6c3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80"
-                    alt="img" class="image3">
-            </div>
+    <div class="card">
+        <div class="card-content">
+        <h2 class="card-title">Card title</h2>
+         <p class="card-body">Lorem, ipsum dolor.Lorem, ipsum dolor.Lorem, ipsum dolor.Lorem, ipsum dolor.</p>  
+         <a href="#" class="button">Learn more</a>
         </div>
     </div>
 
