@@ -33,8 +33,10 @@ body {
 
 }
 
-.card:hover {
-    transform: scale(1.05);
+.card:hover,
+.card:focus-within {
+        
+    transform: rotateY(180deg);
 }
 
 .card-content {
@@ -43,11 +45,7 @@ body {
     background: linear-gradient(hsl(0 0% 0% / 0),
             hsl(0 0% 0% /0.3) 10%,
             hsl(0 0% 0% / 1));
-    transform:translateY(65%);
-    transition: transform 500ms ease;
-}
-.card:hover .card-content{
-    transform:translateY(0);
+    
 }
 
 .card-title {
@@ -56,13 +54,12 @@ body {
 
 }
 
-
 .card-title::after {
     content: "";
     left: calc(var(--padding)* -1);
     position: absolute;
     height: 4px;
-    transform: scaleX(0);
+   
     bottom: -2px;
     width: calc(100% + var(--padding));
     background: var(--clr-accent-400);
@@ -70,7 +67,7 @@ body {
     transform-origin:left;
 
 }
-.card:hover .card-title::after{
+.card:hover .card-title::after,.card:focus-within .card-title::after{
     transform:scaleX(1);
 }
 
@@ -93,3 +90,31 @@ body {
 .button:focus {
     background-color: var(--clr-neutral-100);
 }
+
+
+@media (hover){
+    .card-content{
+        transform:translateY(65%);
+        transition: transform 500ms ease;
+    }
+    .card:hover .card-content, .card:focus-within .card-content {
+        transform:translateY(0);
+        transition-delay:500ms;
+    
+    }
+    .card:focus-within .card-content{
+        transition-duration: 0ms;
+    }
+    .card-content > *:not(.card-title) {
+        opacity:0;
+        transition : opacity 500ms linear;
+    }
+    .card:hover .card-content > *:not(.card-title),.card:focus-within .card-content > *:not(.card-title){
+        opacity:1;
+        transition-delay:1000ms;
+    }
+    .card-title:after{
+        transform: scaleX(0);
+    }
+}
+
